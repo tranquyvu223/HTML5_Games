@@ -14,7 +14,7 @@ function initPuzzles() {
 }
 
 function randomInteger(min, max) {
-  return Math.floor(Math.random() * (max - min) ) + min;
+  return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
 
 var randomPuzzles = [];
@@ -26,7 +26,8 @@ function initRandomPuzzles() {
       var rd;
       do {
         rd = randomInteger(1, MAX_ROW * MAX_COL);
-      } while (stack.indexOf(rd) > 0);
+      } while (stack.includes(rd));
+
       newRow.push(rd);
       stack.push(rd);
 
