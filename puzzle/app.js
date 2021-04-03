@@ -86,24 +86,23 @@ function switchPosition(key) {
     case 'ArrowLeft':
       if (blankPosition.col != MAX_COL - 1) {
         objectPosition.row = blankPosition.row;
-        objectPosition.col = blankPosition.col + 1;
+        objectPosition.col = blankPosition.col - 1;
       }
       break;
     case'ArrowUp':
       if (blankPosition.row != MAX_ROW - 1) {
-        objectPosition.row = blankPosition.row + 1;
         objectPosition.col = blankPosition.col;
       }
       break;
     case 'ArrowRight':
       if (blankPosition.col != 0) {
         objectPosition.row = blankPosition.row;
-        objectPosition.col = blankPosition.col - 1;
+        objectPosition.col = blankPosition.col + 1;
       }
       break;
     case 'ArrowDown':
       if (blankPosition.row != 0) {
-        objectPosition.row = blankPosition.row - 1;
+        objectPosition.row = blankPosition.row + 1;
         objectPosition.col = blankPosition.col;
       }
       break;
